@@ -6,20 +6,13 @@
 		//intro
 		var score = 0;
 
-	
-
-
-
-		 function peterGame(){
+			function peterGame(){
 				var age = prompt('How old are you?');
 
 
-				if (age > 18){
+				if (age >= 18){
 					alert('Go ahead and play');
-				}
-
-
-				else{
+				}else{
 					alert('Play at your own risk');
 				}
 
@@ -54,14 +47,9 @@
 					message= 'Nice job!';
 					++(score)
 					document.getElementById("score").innerHTML = score;
+				}else{
+					message = 'Keep going!';
 				}
-
-
-				else{
-				message = 'Keep going!';
-				}
-
-
 					alert(message);
 					//age question
 		}
@@ -78,16 +66,14 @@
 					document.getElementById("score").innerHTML = score;
 				} else if ((15 <= old && old <= 17) || (19 <= old && old <= 21)){
 					alert('you are close.');
-				}
-				else {
+				}else {
 					alert('you are way off');
 
 				}
 
 				if(score >= 2){
-					alert('You win!')
-				}
-				else{
+					alert('You win! Click button to restart')
+				}else{
 					alert('Good game, press button to restart!')
 				}
 
